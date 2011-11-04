@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/makecell
+# catalog-date 2009-09-07 01:31:27 +0200
+# catalog-license lppl
+# catalog-version 0.1e
 Name:		texlive-makecell
 Version:	0.1e
 Release:	1
@@ -51,6 +57,7 @@ lines in tabular environments with defined thickness.
 %doc %{_texmfdistdir}/doc/latex/makecell/makecell.pdf
 #- source
 %doc %{_texmfdistdir}/source/latex/makecell/makecell.dtx
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,3 +68,5 @@ lines in tabular environments with defined thickness.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
