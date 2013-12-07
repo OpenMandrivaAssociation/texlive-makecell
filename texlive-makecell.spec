@@ -6,7 +6,7 @@
 # catalog-version 0.1e
 Name:		texlive-makecell
 Version:	0.1e
-Release:	2
+Release:	3
 Summary:	Tabular column heads and multilined cells
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/makecell
