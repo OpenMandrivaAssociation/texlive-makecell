@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/makecell
-# catalog-date 2009-09-07 01:31:27 +0200
-# catalog-license lppl
-# catalog-version 0.1e
 Name:		texlive-makecell
-Version:	0.1e
-Release:	11
+Version:	15878
+Release:	1
 Summary:	Tabular column heads and multilined cells
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/makecell
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/makecell.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/makecell.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/makecell.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/makecell.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/makecell.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/makecell.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -32,12 +26,12 @@ skip cells; -- diagonally divided cells; and -- horizontal
 lines in tabular environments with defined thickness.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -51,24 +45,11 @@ lines in tabular environments with defined thickness.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.1e-2
-+ Revision: 753682
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.1e-1
-+ Revision: 718944
-- texlive-makecell
-- texlive-makecell
-- texlive-makecell
-- texlive-makecell
-
