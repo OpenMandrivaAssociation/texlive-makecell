@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Tabular column heads and multilined cells
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/makecell
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/makecell
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/makecell.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/makecell.doc.r%{version}.tar.xz
